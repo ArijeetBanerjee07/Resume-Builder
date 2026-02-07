@@ -1,0 +1,25 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue circular background -->
+  <circle cx="128" cy="128" r="120" fill="#1E66F5"/>
+
+  <!-- Stylized R -->
+  <path
+    d="M95 70
+       h45
+       c30 0 45 18 45 40
+       c0 18-10 32-28 37
+       l28 39
+       h-28
+       l-24-35
+       h-15
+       v35
+       h-23
+       z
+       m23 22
+       v36
+       h20
+       c14 0 23-7 23-18
+       c0-11-9-18-23-18
+       z"
+    fill="#ffffff"/>
+</svg>

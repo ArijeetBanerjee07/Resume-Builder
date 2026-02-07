@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Story+Script&family=Pacifico&display=swap');
+@import "tailwindcss";
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix autofill white background issue */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Additional input styling for glassmorphic forms */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: transparent !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+}
+
+@layer base {
+    button {
+        @apply cursor-pointer;
+    }
+    input:not([type="checkbox"]){
+        @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg;
+    }
+    textarea {
+        @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg resize-none;
+    }
+}
