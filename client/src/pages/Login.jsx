@@ -20,7 +20,8 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const { data } = await api.post(`/api/users/${state}`, formData)
+            const endpoint = state === "login" ? "login" : "signup";
+            const { data } = await api.post(`/api/users/${endpoint}`, formData)
             dispatch(login(data))
             localStorage.setItem("token", data.token)
             toast.success(data.message)
